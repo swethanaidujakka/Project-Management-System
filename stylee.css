@@ -1,0 +1,31 @@
+*{
+    margin:0;
+    padding:0;
+    font-family:serif
+}
+.hero
+{
+    width:100%;
+    height:100vh;
+    background-image: url(rgm4.png);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+h1{
+    color:antiquewhite;
+    font-size:70px;
+    margin:10px 0 30px;
+    line-height:80px;
+}
+a{
+    width:50%;
+    color:black;
+    text-decoration: none;
+}
+li{
+    float:right;
+    margin-right:80px;
+    font-size:25px;
+}

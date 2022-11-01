@@ -1,0 +1,71 @@
+<html>
+    <head><title>Login And Registration Form</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="hero">
+            <div class="form-box">
+                <div class="button-box">
+                    <div id="btn"></div>
+                    <button type="button" class="toggle-btn" onclick="Login()">Login</button>
+                    <button type="button" class="toggle-btn" onclick="Register()">Register</button>
+                </div>
+                <form id="Login" class="input-group" method="post" action="login.php">
+                    <label for="UserId">UserId</label>
+                    <input type="text" class="input-field" name="UserId" required>
+                    <label for="Password">Password</label>
+                    <input type="password" class="input-field" name="Password" required>
+                    <label for="Role">Role</label>
+                    <select class="input-field" name="Role" required>
+                        <option value="" disabled selected hidden>----Select----</option>
+                        <option value="admin">Administrator</option>
+                        <option value="Coordinator">Coordinator</option>
+                        <option value="Guide">Guide</option>
+                        <option value="TeamLeader">TeamLeader</option>
+                        <option value="TeamMember">TeamMember</option>
+                    </select><br><br>
+                    <input type="checkbox" class="check-box" required><span>Rememeber Password</span><br><br>
+                    <button type="submit" class="submit-btn">Login</button>
+                </form>
+                <form id="Register" class="input-group" method="post" action="registration.php">
+                    <label for="TeamNumber">TeamNumber</label>
+                    <input type="number" class="input-field" min="1" max="100" value="TeamNumber" name="TeamNumber" required>
+                    <!-- <label for="TeamMembers">TeamMembers</label>
+                    <input type="text" class="input-field" name="TeamMembers" required> -->
+                    <label for="Role">Role</label>
+                    <select class="input-field" name="Role" required>
+                        <option value="" disabled selected hidden>----Select----</option>
+                        <option value="TeamLeader">TeamLeader</option>
+                        <option value="TeamMember">TeamMember</option>
+                    </select><br><br>
+                    <label for="UserId">UserId</label>
+                    <input type="text" class="input-field" name="UserId" required>
+                    <label for="Password">Password</label>
+                    <input type="password" class="input-field" name="Password" required>
+                    <label for="TitleoftheProject">TitleoftheProject</label>
+                    <input type="text" class="input-field" name="TitleoftheProject" required>
+                    <input type="checkbox" class="check-box" required><span>I agree to the terms and conditions</span><br><br>
+                    <button type="submit" class="submit-btn">Register</button>
+                </form>
+            </div>
+        </div>
+        <script>
+        var x=document.getElementById("Login");
+        var y=document.getElementById("Register");
+        var z=document.getElementById("btn");
+        function Register()
+        {
+            x.style.left="-400px";
+            y.style.left="50px";
+            z.style.left="110px";
+        
+        }
+        function Login()
+        {
+            x.style.left="50px";
+            y.style.left="450px";
+            z.style.left="0";
+        }
+        </script>
+    </body>
+</html>
